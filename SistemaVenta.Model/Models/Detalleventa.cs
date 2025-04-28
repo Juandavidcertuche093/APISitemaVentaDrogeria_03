@@ -11,11 +11,11 @@ public partial class Detalleventa
 
     public int IdMedicamentoEmpaque { get; set; }
 
-    public int Cantidad { get; set; }
+    public int? Cantidad { get; set; }
 
-    public decimal Precio { get; set; }
+    public decimal? Precio { get; set; }
 
-    public decimal Total { get; set; }
+    public decimal? Total { get; set; }
 
     public virtual MedicamentoEmpaque IdMedicamentoEmpaqueNavigation { get; set; } = null!;
 
