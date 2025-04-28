@@ -10,26 +10,26 @@ namespace SistemaVenta.API.Controllers
     [Route("api/[controller]")]
     [Authorize]
     [ApiController]
-    public class RolController : ControllerBase
+    public class MenuController : ControllerBase
     {
-        private readonly IRolService _rolServicio;
+        private readonly IMenuService _menuServicio;
 
-        public RolController(IRolService rolServicio)
+        public MenuController(IMenuService menuServicio)
         {
-            _rolServicio = rolServicio;
+            _menuServicio = menuServicio;
         }
 
-        //devolvemos la lista de los roles
+        //devolvemos la lista de menus
         [HttpGet]
         [Route("Lista")]
-        public async Task<IActionResult> Lista()
+        public async Task<IActionResult> Lista(int idUsuario)//con el idUsuario podemos permitir que menus pueden tener
         {
-            var rsp = new Response<List<RolDTO>>();//lo que nos duelve una lista de RolDTO
+            var rsp = new Response<List<MenuDTO>>();
 
             try
             {
                 rsp.status = true;
-                rsp.value = await _rolServicio.Lista();
+                rsp.value = await _menuServicio.Lista(idUsuario);
             }
             catch (Exception ex)
             {
