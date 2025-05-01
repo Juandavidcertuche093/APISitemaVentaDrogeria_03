@@ -40,7 +40,7 @@ namespace SistemaVenta.IOC
             services.AddScoped<IImagenMedicamentoService, ImagenMedicamentoService>();
             services.AddScoped<IMedicamentoService, MedicamentoService>();
             services.AddScoped<IVentaService, VentaService>();
-            //services.AddScoped<ICompraService, CompraService>();
+            services.AddScoped<ICompraService, CompraService>();
             //services.AddScoped<IDashboardService, DashboardService>();
             services.AddScoped<IMenuService, MenuService>();
             services.AddScoped<IProveedorService, ProveedorService>();
