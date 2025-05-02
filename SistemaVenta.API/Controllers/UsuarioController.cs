@@ -129,7 +129,7 @@ namespace SistemaVenta.API.Controllers
 
 
         [HttpPost]
-        //[Authorize]
+        [Authorize]
         [Route("Guardar")]
         public async Task<IActionResult> Guardar([FromBody] UsuarioDTO usuario)
         {
