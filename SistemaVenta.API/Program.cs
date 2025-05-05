@@ -66,6 +66,8 @@ if (app.Environment.IsDevelopment())
 //configurar los CORS
 app.UseCors("NewPolicy");
 
+app.UseAuthentication(); // <-- NECESARIO
+
 app.UseAuthorization();
 
 app.MapControllers();
