@@ -1,0 +1,8 @@
+Dockerfile
+.dockerignore
+bin/
+obj/
+.git/
+.gitignore
+*.swp
+# Add any other directories or files you don't need for the build
