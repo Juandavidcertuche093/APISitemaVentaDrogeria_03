@@ -47,7 +47,10 @@ builder.Services.AddCors(options =>
     options.AddPolicy("NewPolicy", policy =>
     {
         policy
-            .WithOrigins("http://localhost:4200") // 👈 origen específico
+            .WithOrigins(
+                "http://localhost:4200",
+                 "https://stock-control-2-0.vercel.app" // 👈 dominio de producción
+            ) // 👈 origen específico
             .AllowAnyHeader()
             .AllowAnyMethod()
             .AllowCredentials(); // 👈 permitir envío de credenciales
